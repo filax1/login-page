@@ -91,7 +91,7 @@ class LoginScreen extends StatelessWidget {
                           onPressed: () {
                             Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => SignUpPage()),
+                            MaterialPageRoute(builder: (context) => SignUpScreen()),
                           );
                           },
                           child: const Text("Sign Up", style: TextStyle(color: Colors.blueAccent)),
