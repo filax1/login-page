@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart'; // Import the HomeScreen
+import 'package:login_page/Screens/sign_up_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -69,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                         ),
                         onPressed: () {
-                          Navigator.pushReplacement(
+                          Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => const HomeScreen()),
                           );
@@ -87,7 +88,12 @@ class LoginScreen extends StatelessWidget {
                           child: const Text("Forgot Password?", style: TextStyle(color: Colors.blueAccent)),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => SignUpPage()),
+                          );
+                          },
                           child: const Text("Sign Up", style: TextStyle(color: Colors.blueAccent)),
                         ),
                       ],
